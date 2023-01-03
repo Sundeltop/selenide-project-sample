@@ -1,0 +1,2 @@
+com.sample.extensions.EnableAllureExtension
+com.codeborne.selenide.junit5.ScreenShooterExtension
