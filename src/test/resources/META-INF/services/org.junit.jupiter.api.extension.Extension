@@ -1,2 +1,3 @@
 com.sample.extensions.EnableAllureExtension
+com.sample.extensions.EnableRemoteExtension
 com.codeborne.selenide.junit5.ScreenShooterExtension
