@@ -1,0 +1,16 @@
+name: Run tests on pull request
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  run-tests-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-java@1
+        with:
+          java-version: '11'
+      - name: Run maven goal
+        run: ./mvnw clean test -Dselenide.headless=true
