@@ -17,3 +17,9 @@ jobs:
           cache: maven
       - name: Run maven goal
         run: mvn clean test -Dselenide.headless=true
+      - name: Generate Allure report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: allure-report
+          path: target/allure-report
