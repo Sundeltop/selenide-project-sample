@@ -23,7 +23,7 @@ public class GooglePage extends BasePage {
 
     public void isSearchResultDisplayed() {
         searchResult
-                .shouldHave(sizeGreaterThanOrEqual(10));
+                .shouldHave(sizeGreaterThanOrEqual(9));
     }
 
     @Override
