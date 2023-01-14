@@ -9,7 +9,6 @@ public class GooglePageTest {
 
     @Test
     public void checkGoogleSearch() {
-        System.out.println("hello world");
         page(GooglePage.class)
                 .performSearch("iphone")
                 .isSearchResultDisplayed();
