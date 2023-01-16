@@ -9,6 +9,8 @@ public class EnableAllureExtension implements BeforeAllCallback {
 
     @Override
     public void beforeAll(ExtensionContext extensionContext) {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true));
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(true)
+                .savePageSource(true));
     }
 }

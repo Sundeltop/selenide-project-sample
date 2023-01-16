@@ -1,3 +1,4 @@
 com.sample.extensions.EnableAllureExtension
 com.sample.extensions.EnableRemoteExtension
+com.sample.extensions.CloseWebDriverExtension
 com.codeborne.selenide.junit5.ScreenShooterExtension

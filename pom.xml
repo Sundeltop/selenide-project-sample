@@ -13,11 +13,12 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenide.version>6.11.0</selenide.version>
-        <junit5.version>5.9.0</junit5.version>
+        <junit5.version>5.9.2</junit5.version>
         <slf4j.version>2.0.5</slf4j.version>
         <lombok.version>1.18.24</lombok.version>
         <allure.version>2.20.1</allure.version>
         <aspectj.version>1.9.7</aspectj.version>
+        <assertj.version>3.24.1</assertj.version>
     </properties>
 
     <dependencies>
@@ -29,6 +30,12 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
             <version>${junit5.version}</version>
             <scope>test</scope>
         </dependency>
@@ -56,6 +63,13 @@
             <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
