@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import com.sample.pages.BasePage;
 import io.qameta.allure.Step;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,12 +53,13 @@ public class InventoryPage extends BasePage {
         return this;
     }
 
-    @Step("Check all products are sorted from low to high")
-    public void isAllProductsSortedLowToHigh() {
+    @Step("Check all products are sorted in expected order")
+    public void isAllProductsSorted(Comparator<Double> expectedOrder) {
         List<Double> prices = productsPrice.asFixedIterable().stream()
                 .map(product -> Double.parseDouble(product.getText().replace("$", "")))
                 .collect(Collectors.toList());
-        assertThat(prices).isSorted();
+
+        assertThat(prices).isSortedAccordingTo(expectedOrder);
     }
 
     @Step("Check Inventory page is opened")
