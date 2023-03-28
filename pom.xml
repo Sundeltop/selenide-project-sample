@@ -12,13 +12,15 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenide.version>6.11.0</selenide.version>
+        <selenide.version>6.12.3</selenide.version>
         <junit5.version>5.9.2</junit5.version>
         <slf4j.version>2.0.5</slf4j.version>
-        <lombok.version>1.18.24</lombok.version>
-        <allure.version>2.20.1</allure.version>
+        <lombok.version>1.18.26</lombok.version>
+        <allure.version>2.21.0</allure.version>
         <aspectj.version>1.9.7</aspectj.version>
-        <assertj.version>3.24.1</assertj.version>
+        <assertj.version>3.24.2</assertj.version>
+        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+        <allure.maven.plugin.version>2.12.0</allure.maven.plugin.version>
     </properties>
 
     <dependencies>
@@ -82,7 +84,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
@@ -103,7 +105,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.12.0</version>
+                <version>${allure.maven.plugin.version}</version>
                 <configuration>
                     <reportVersion>${allure.version}</reportVersion>
                     <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
